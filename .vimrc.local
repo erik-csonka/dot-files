@@ -1,0 +1,46 @@
+if has("gui_running")
+  " colorscheme solarized
+  " set background=light
+  colorscheme Tomorrow-Night
+  set background=dark
+else
+  colorscheme molokai
+endif
+
+" set guifont=Inconsolata-g:h18
+set ruler
+set showcmd
+set incsearch
+set laststatus=2
+syntax on
+
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_check_on_open=0
+let g:syntastic_echo_current_error=0
+let g:syntastic_auto_jump=0
+let g:syntastic_auto_loc_list=0
+
+let g:syntastic_enable_balloons=0
+
+set virtualedit=""
+
+let AutoCloseOn = 0
+
+let NERDTreeShowHidden=1
+let g:blockle_mapping = '<Leader>b'
+
+set foldmethod=manual
+
+autocmd BufRead,BufNewFile *.jst.ejs set filetype=eruby.html
+autocmd BufRead,BufNewFile *.jst.hamljs set filetype=haml
+
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+
+set visualbell
+
+:command W w
+:command Q q
+
